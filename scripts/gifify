@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]; then
+    echo >&2 "Usage: gifify <mov-file>"
+    exit 1
+fi
+
+FILE=$1
+echo "Turning $file into a GIF..."
+ffmpeg -i $FILE -s 222x480 -r 25 -pix_fmt rgb24 -f gif - | gifsicle --optimize=3 --delay=3 > ${FILE%.*}.gif

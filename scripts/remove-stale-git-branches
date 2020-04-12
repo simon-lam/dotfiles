@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "$1"
+cd "$1"
+git fetch -p && git branch -vv | grep -v 'master' | grep -v 'develop' | grep ': gone]' | awk '{print $1}' | xargs git branch -D
