@@ -47,3 +47,13 @@ brew "yarn"
 # Misc
 brew "gifsicle"
 brew "ffmpeg"
+
+# Applications
+cask "rectangle"
+cask "sourcetree"
+cask "cyberduck"
+cask "spotify"
+cask "microsoft-remote-desktop"
+cask "asana"
+cask "postman"
+cask "google-chrome"
